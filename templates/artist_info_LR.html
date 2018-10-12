@@ -1,0 +1,71 @@
+<!doctype html>
+<title>Artist Probability Calculator</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_artist.css')}}'>
+<div class=page>
+  <h1>Pitchfork Reception Calculator</h1>
+  <h2>Probability: Above / Below Average</h2>
+  <div class=metanav>
+
+<h3>
+Input Artist Info:
+</h3>
+
+<form id='artistinfoform' method='post' action='artist_info' > <!-- action is the URL you want to move to next-->
+   <p>
+    <strong>Genre:</strong> <br />
+    Electronic <input type='radio' name='genre' value=0 /> <br />
+    Experimental <input type='radio' name='genre' value=1 /> <br />
+    Folk/Country <input type='radio' name='genre' value=2 /> <br />
+    Global <input type='radio' name='genre' value=3 /> <br />
+    Jazz <input type='radio' name='genre' value=4 /> <br />
+    Metal <input type='radio' name='genre' value=5 /> <br />
+    Pop/R&B <input type='radio' name='genre' value=6 /> <br />
+    Rap <input type='radio' name='genre' value=7 /> <br />
+    Rock <input type='radio' name='genre' value=8 /> <br />
+    Unlisted <input type='radio' name='genre' value=9 /> <br />
+    </p>
+   <p>
+   <strong>Spotify Followers:</strong> <input type='number' placeholder='0 - 2.6 bn' name='spotifyFollowers' />
+   </p>
+   <p>
+   <strong>Spotify Popularity:</strong> <input type='number' placeholder='0 - 100' name='spotifyPopularity' />
+   </p>
+   <p>
+    <strong>Current Label Parent(s):</strong> <br />
+    EMI Records <input type='checkbox' name='emi_Label' value=1 /> <br />
+    Indie Label <input type='checkbox' name='indie_Label' value=1 /> <br />
+    Sony Music Entertainment <input type='checkbox' name='sony_Label' value=1 /> <br />
+    Universal Music Group <input type='checkbox' name='universal_Label' value=1 /> <br />
+    Warner Music Group <input type='checkbox' name='warner_Label' value=1 /> <br />
+    </p>
+    <p>
+    <strong>Albums Released To Date:</strong><br />
+    New artist: 0-3 <input type='radio' name='established.rating' value=1 /> <br />
+    Semi-established artist: 4-7 <input type='radio' name='established.rating' value=2 /> <br />
+    Established artist: 8+ <input type='radio' name='established.rating' value=0 /> <br />
+    </p>
+   <p>
+    <strong>Sub-Genre(s):</strong> <br />
+    Art Pop <input type='checkbox' name='art_pop' value=1 /> <br />
+    Chamber Psych <input type='checkbox' name='chamber_psych' value=1 /> <br />
+    Chillwave <input type='checkbox' name='chillwave' value=1 /> <br />
+    Drone <input type='checkbox' name='drone' value=1 /> <br />
+    Electronic <input type='checkbox' name='electronic' value=1 /> <br />
+    Fourth World <input type='checkbox' name='fourth_world' value=1 /> <br />
+    Freak Folk <input type='checkbox' name='freak_folk' value=1 /> <br />
+    Indie R&B <input type='checkbox' name='indie_r_b' value=1 /> <br />
+    Indie Rock <input type='checkbox' name='indie_rock' value=1 /> <br />
+    Indietronica <input type='checkbox' name='indietronica' value=1 /> <br />
+    Microhouse <input type='checkbox' name='microhouse' value=1 /> <br />
+    Modern Rock <input type='checkbox' name='modern_rock' value=1 /> <br />
+    Noise Pop <input type='checkbox' name='noise_pop' value=1 /> <br />
+    Noise Rock <input type='checkbox' name='noise_rock' value=1 /> <br />
+    Rock <input type='checkbox' name='rock' value=1 /> <br />
+    </p>
+    <p>
+   <input type='submit' value='Submit' /> <!-- value is the text that will appear on the button. -->
+   </p>
+</form>
+
+</div>
+</div>
