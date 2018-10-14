@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Artist Probability Calculator</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+      <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_artist.css')}}'>
+    </head>
+    <body>
+    <!-- If it messes up remove everything above this -->
+
+
+        <header class="tac">
+            <h1>Pitchfork Reception Calculator</h1>
+            <p class="sub-title">Probability: Above / Below Average</p>
+        </header>
+
+
+        <main>
+
+          <h2 class="tac">Probability of Artist Being Rated Above Average: <b class="cRed">{{prediction}}%</b></h2>
+
+        </main>
+      <!-- If it messes up remove everything under this -->
+    </body>
+</html>
+
+
+
+<!-- OLD WORK
 <!doctype html>
 <title>Artist Prediction</title>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_artist.css')}}'>
@@ -7,4 +40,4 @@
 
 <h2>
 Probability of Artist Being Rated Above Average: <font size="2" color="red"> {{prediction}}% </font>
-</h2>
+</h2> -->

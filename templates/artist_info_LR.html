@@ -1,3 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Artist Probability Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+		<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_artist.css')}}'>
+	</head>
+
+	<body>
+	<!-- If it messes up remove everything above this -->
+
+		<header class="tac">
+			  <h1>Pitchfork Reception Calculator</h1>
+				<p class="sub-title">Probability: Above / Below Average</p>
+		</header>
+
+		<main>
+
+			<h3>Input Artist Info:</h3>
+
+			<form id="artistinfoform" method="post" action="artist_info" >
+
+
+				<section class="flex space-around">
+					<div class="field flexOne">
+						<label>Genre:</label>
+
+						<label for="electronic">
+							<input id="electronic" type="radio" name="genre" value="0" />
+							<span>Electronic</span>
+						</label>
+						<label for="experimental">
+							<input id="experimental" type="radio" name="genre" value="1" />
+							<span>Experimental</span>
+						</label>
+						<label for="folk">
+							<input id="folk" type="radio" name="genre" value="2" />
+							<span>Folk/Country</span>
+						</label>
+						<label for="global">
+							<input id="global" type="radio" name="genre" value="3" />
+							<span>Global</span>
+						</label>
+						<label for="jazz">
+							<input id="jazz" type="radio" name="genre" value="4" />
+							<span>Jazz</span>
+						</label>
+						<label for="metal">
+							<input id="metal" type="radio" name="genre" value="5" />
+							<span>Metal</span>
+						</label>
+						<label for="pop">
+							<input id="pop" type="radio" name="genre" value="6" />
+							<span>Pop/R&B</span>
+						</label>
+						<label for="rap">
+							<input id="rap" type="radio" name="genre" value="7" />
+							<span>Rap</span>
+						</label>
+						<label for="rock">
+							<input id="rock" type="radio" name="genre" value="8" />
+							<span>Rock</span>
+						</label>
+						<label for="unlisted">
+							<input id="unlisted" type="radio" name="genre" value="9" />
+							<span>Unlisted</span>
+						</label>
+					</div>
+
+
+					<div class="field flexOne">
+						<label>Sub-Genre(s):</label>
+
+						<label for="art_pop">
+							<input id="art_pop" type="checkbox" name="art_pop" value="1" />
+							<span>Art Pop</span>
+						</label>
+						<label for="chamber_psych">
+							<input id="chamber_psych" type="checkbox" name="chamber_psych" value="1" />
+							<span>Chamber Psych</span>
+						</label>
+						<label for="chillwave">
+							<input id="chillwave" type="checkbox" name="chillwave" value="1" />
+							<span>Chillwave</span>
+						</label>
+						<label for="drone">
+							<input id="drone" type="checkbox" name="drone" value="1" />
+							<span>Drone</span>
+						</label>
+						<label for="electronic">
+							<input id="electronic" type="checkbox" name="electronic" value="1" />
+							<span>Electronic</span>
+						</label>
+						<label for="fourth_world">
+							<input id="fourth_world" type="checkbox" name="fourth_world" value="1" />
+							<span>Fourth World</span>
+						</label>
+						<label for="freak_folk">
+							<input id="freak_folk" type="checkbox" name="freak_folk" value="1" />
+							<span>Freak Folk</span>
+						</label>
+						<label for="indie_r_b">
+							<input id="indie_r_b" type="checkbox" name="indie_r_b" value="1" />
+							<span>Indie R&B</span>
+						</label>
+						<label for="indie_rock">
+							<input id="indie_rock" type="checkbox" name="indie_rock" value="1" />
+							<span>Indie Rock</span>
+						</label>
+						<label for="indietronica">
+							<input id="indietronica" type="checkbox" name="indietronica" value="1" />
+							<span>Indietronica</span>
+						</label>
+						<label for="microhouse">
+							<input id="microhouse" type="checkbox" name="microhouse" value="1" />
+							<span>Microhouse</span>
+						</label>
+						<label for="modern_rock">
+							<input id="modern_rock" type="checkbox" name="modern_rock" value="1" />
+							<span>Modern Rock</span>
+						</label>
+						<label for="noise_pop">
+							<input id="noise_pop" type="checkbox" name="noise_pop" value="1" />
+							<span>Noise Pop</span>
+						</label>
+						<label for="noise_rock">
+							<input id="noise_rock" type="checkbox" name="noise_rock" value="1" />
+							<span>Noise Rock</span>
+						</label>
+						<label for="rock">
+							<input id="rock" type="checkbox" name="rock" value="1" />
+							<span>Rock</span>
+						</label>
+					</div>
+				</section>
+
+
+				<section class="flex space-around">
+					<div class="field flexOne">
+						<label>Spotify Followers:</label>
+						<input type="tel" class="input" placeholder="0 - 2.6 bn" name="spotifyFollowers" />
+					</div>
+
+					<div class="field flexOne">
+						<label>Spotify Popularity:</label>
+						<input type="tel" class="input" placeholder="0 - 100" name="spotifyPopularity" />
+					</div>
+				</section>
+
+
+				<section class="flex space-around">
+					<div class="field flexOne">
+						<label>Current Label Parent(s):</label>
+
+						<label for="emi_Label">
+							<input id="emi_Label" type="checkbox" name="emi_Label" value="1" />
+							<span>EMI Records</span>
+						</label>
+						<label for="indie_Label">
+							<input id="indie_Label" type="checkbox" name="indie_Label" value="1" />
+							<span>Indie Label</span>
+						</label>
+						<label for="sony_Label">
+							<input id="sony_Label" type="checkbox" name="sony_Label" value="1" />
+							<span>Sony Music Entertainment</span>
+						</label>
+						<label for="universal_Label">
+							<input id="universal_Label" type="checkbox" name="universal_Label" value="1" />
+							<span>Universal Music Group</span>
+						</label>
+						<label for="warner_Label">
+							<input id="warner_Label" type="checkbox" name="warner_Label" value="1" />
+							<span>Warner Music Group</span>
+						</label>
+					</div>
+
+					<div class="field flexOne">
+						<label>Albums Released To Date:</label>
+
+						<label for="newArt">
+							<input id="newArt" type="radio" name="established.rating" value="1" />
+							<span>New artist: 0-3 </span>
+						</label>
+						<label for="semiEstablishedArt">
+							<input id="semiEstablishedArt" type="radio" name="established.rating" value="2" />
+							<span>Semi-established artist: 4-7 </span>
+						</label>
+						<label for="establishedArt">
+							<input id="establishedArt" type="radio" name="established.rating" value="0" />
+							<span>Established artist: 8+</span>
+						</label>
+					</div>
+				</section>
+
+
+				<div class="containerBtn flex-end">
+					<button class="btn">Submit</button>
+				</div>
+
+			</form>
+
+		</main>
+
+
+	<!-- If it messes up remove everything under this -->
+	</body>
+</html>
+
+
+
+<!-- OLD WORK
 <!doctype html>
 <title>Artist Probability Calculator</title>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_artist.css')}}'>
@@ -6,11 +222,9 @@
   <h2>Probability: Above / Below Average</h2>
   <div class=metanav>
 
-<h3>
-Input Artist Info:
-</h3>
+<h3>Input Artist Info:</h3>
 
-<form id='artistinfoform' method='post' action='artist_info' > <!-- action is the URL you want to move to next-->
+<form id='artistinfoform' method='post' action='artist_info' >
    <p>
     <strong>Genre:</strong> <br />
     Electronic <input type='radio' name='genre' value=0 /> <br />
@@ -63,9 +277,10 @@ Input Artist Info:
     Rock <input type='checkbox' name='rock' value=1 /> <br />
     </p>
     <p>
-   <input type='submit' value='Submit' /> <!-- value is the text that will appear on the button. -->
+   <input type='submit' value='Submit' />
    </p>
 </form>
 
 </div>
 </div>
+-->

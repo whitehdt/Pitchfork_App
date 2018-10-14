@@ -1,3 +1,211 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* /RESET */
+
+
+/* DOM */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #f8f8f8;
+  color: rgba(0, 0, 0, .95);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
+}
+
+form {
+  padding: .8rem;
+}
+
+header {
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.6rem;
+}
+/* DOM */
+
+
+/* Titles */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+
+.sub-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+/* Titles */
+
+
+
+/* Field */
+.field {
+  margin-bottom: 1.6rem;
+}
+
+.field label {
+  align-items: center;
+  display: flex;
+  font-size: 1.6rem;
+  padding: .2rem 0;
+  margin-bottom: .6rem;
+}
+
+.field label span {
+  font-size: 1.4rem;
+  margin-left: .8rem;
+}
+
+.field .input {
+  border: .1rem solid transparent;
+  border-bottom-color: #eee;
+  display: inline-block;
+  padding: .6rem .8rem;
+  border-radius: .3rem .3rem 0 0;
+  outline: transparent;
+  transition: border-bottom-color .3s linear;
+}
+
+.field .input:focus {
+  border-bottom-color: #009688;
+}
+
+.containerBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+/* Field */
+
+
+.btn {
+  display: inline-block;
+  color: #FFF;
+  box-shadow: 0 4px 8px -5px #000;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding: .8rem 1.6rem;
+  background: #009688;
+  border: none;
+  border-radius: .3rem;
+  text-decoration: none;
+  transition: background .3s linear;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.btn:hover {
+  background: #009799;
+}
+.btn:active {
+  box-shadow: 0 6px 8px -5px #000;
+}
+
+
+/* Layout */
+.flex {
+  display: flex;
+}
+
+.flexOne {
+  flex: 1;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+/* Layout */
+
+
+
+
+/* Util */
+.tac { text-align: center; }
+
+.cRed { color: #ff5252; }
+/* Util */
+
+/*
+
 body            { font-family: sans-serif; background: #eee; }
 a, h1, h2       { color: #377BA8; }
 h1, h2          { font-family: 'Georgia', serif; margin: 0; }
@@ -16,3 +224,5 @@ h2              { font-size: 1.2em; }
 .flash          { background: #CEE5F5; padding: 0.5em;
                   border: 1px solid #AACBE2; }
 .error          { background: #F0D6D6; padding: 0.5em; }
+
+ */
