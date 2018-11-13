@@ -12,6 +12,7 @@ Created on Wed Oct 10 13:19:18 2018
 # Python 3.6
 import pickle
 import os
+from sklearn import linear_model
 from flask import Flask,render_template,request,redirect
 
 #os.chdir('/Users/drewwhitehead/Documents/The Data Incubator/Pitchfork Project/Flask App')
