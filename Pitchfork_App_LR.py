@@ -19,7 +19,7 @@ with open('X_train_mean.pkl', 'rb') as input_file:
     X_predict = pickle.load(input_file)
 with open('lr_aba.pkl', 'rb') as input_file:
     lr_aba = pickle.load(input_file)
-    
+
 # create inputs lists and remove extranious items
 inputList = list(X_predict)
 removeItems = ['pub_year','word_count', 'char_count','sentiment','subjectivity','legacyReview']
@@ -38,12 +38,12 @@ def artist_info():
     if request.method == 'GET':
         return render_template('artist_info_LR.html')
     else: # request was a post (meaning a user imput was provided)
-        
+
         # zero out inputs
         for item in inputList:
             if item in X_predict:
                 X_predict[item] = 0
-        
+
         # add categorical inputs
         for item in inputList:
             if item in request.form:
@@ -52,9 +52,9 @@ def artist_info():
         prediction = lr_aba.predict_proba(X_predict)[0][1]
         print(prediction)
         prediction = round(prediction*100,2)
-        
+
         return render_template('artist_pred_output_LR.html', prediction=prediction)
 
 # triggers the debugger if the name is main
 if __name__ == '__main__':
-    app_pitchfork.run(debug=True)
+    app.run(port=33507)
