@@ -14,7 +14,7 @@ import pickle
 import os
 from flask import Flask,render_template,request,redirect
 
-os.chdir('/Users/drewwhitehead/Documents/The Data Incubator/Pitchfork Project/Flask App')
+#os.chdir('/Users/drewwhitehead/Documents/The Data Incubator/Pitchfork Project/Flask App')
 with open('X_train_mean.pkl', 'rb') as input_file:
     X_predict = pickle.load(input_file)
 with open('lr_aba.pkl', 'rb') as input_file:
