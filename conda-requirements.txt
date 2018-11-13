@@ -1,0 +1,5 @@
+pickle
+os
+flask
+jinja2
+pip
