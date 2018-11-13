@@ -19,6 +19,7 @@ import numpy as np
 import os
 from sklearn import model_selection, metrics, tree, linear_model
 import pickle
+import dill
 
 # load modeling file
 os.chdir('/Users/drewwhitehead/Documents/The Data Incubator/Pitchfork Project/Excel Files')
@@ -75,8 +76,7 @@ X_test = testing_set[['char_count', 'word_count', 'genre', 'legacyReview',
                  'fourth_world', 'subjectivity']]
 y_test = testing_set['abv_blw_yr_avg_rat']
 
-# fit decision tree
-
+# fit linear regression model
 lr_aba = linear_model.LogisticRegression()
 lr_aba.fit(X_train, y_train)
 
@@ -102,16 +102,21 @@ X_train_mean = X_train_mean.transpose()
 list(X_train)
 
 # pickle mean df and model
-os.chdir('/Users/drewwhitehead/Documents/The Data Incubator/Pitchfork Project/Flask App')
+os.chdir('/Users/drewwhitehead/Documents/The Data Incubator/Pitchfork Project/Flask App/static')
+
+# set recurse as true to enable the model to be run standalone
+dill.settings['recurse'] = True
+
 with open('X_train_mean.pkl', 'wb') as output_file:
-    pickle.dump(X_train_mean, output_file)
+    dill.dump(X_train_mean, output_file)
 with open('lr_aba.pkl', 'wb') as output_file:
-    pickle.dump(lr_aba, output_file)
+    dill.dump(lr_aba, output_file)
+
 # ensure data can be extracted
 with open('X_train_mean.pkl', 'rb') as input_file:
-    X_train_mean = pickle.load(input_file)
+    X_train_mean = dill.load(input_file)
 with open('lr_aba.pkl', 'rb') as input_file:
-    lr_aba = pickle.load(input_file)
+    lr_aba = dill.load(input_file)
 
 import matplotlib.pyplot as plt
 plt.hist(y_probs)
