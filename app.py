@@ -31,10 +31,10 @@ for item in removeItems:
 X_predict['legacyReview'] = 0
 
 # create flask obj
-app_pitchfork = Flask(__name__)
+app = Flask(__name__)
 
 # apply the class instance method (route) as the decorator
-@app_pitchfork.route('/artist_info',methods=['GET','POST']) # 127.0.0.1:5000/artist_info
+@app.route('/artist_info',methods=['GET','POST']) # 127.0.0.1:5000/artist_info
 def artist_info():
     if request.method == 'GET':
         return render_template('artist_info_LR.html')
