@@ -15,9 +15,9 @@ import os
 from flask import Flask,render_template,request,redirect
 
 #os.chdir('/Users/drewwhitehead/Documents/The Data Incubator/Pitchfork Project/Flask App')
-with open('X_train_mean.pkl', 'rb') as input_file:
+with open('/app/X_train_mean.pkl', 'rb') as input_file:
     X_predict = pickle.load(input_file)
-with open('lr_aba.pkl', 'rb') as input_file:
+with open('/app/lr_aba.pkl', 'rb') as input_file:
     lr_aba = pickle.load(input_file)
 
 # create inputs lists and remove extranious items
