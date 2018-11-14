@@ -110,6 +110,7 @@ h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: .75rem;
+  margin-top: 0;
 }
 
 h4 {
@@ -222,6 +223,8 @@ h4 {
 .tac { text-align: center; }
 
 .cRed { color: #ff5252; }
+
+.mb-2 { margin-bottom: 2rem; }
 /* Util */
 
 /*
