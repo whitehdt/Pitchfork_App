@@ -10,7 +10,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, 
+figure, figcaption, footer,
 
 
 
@@ -83,7 +83,7 @@ a {
 
 p {
   font-size: 1.2rem;
-  margin-bottom: .5rem;
+  margin-bottom: .75rem;
 }
 
 main {
