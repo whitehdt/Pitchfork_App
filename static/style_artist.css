@@ -10,7 +10,15 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, 
+
+
+
+
+
+
+
+, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -67,9 +75,16 @@ form {
 
 header {
   padding: 1rem;
-  margin-bottom: 1rem;
 }
 
+a {
+  color: #009688;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
 
 main {
   max-width: 1024px;
@@ -105,7 +120,6 @@ h4 {
 
 .sub-title {
   font-size: 2rem;
-  margin-bottom: 1rem;
   margin-top: -1rem;
 }
 
